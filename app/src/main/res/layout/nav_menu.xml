@@ -1,35 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
 
     <group>
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_profiles"
-            android:title="Profile"/>
+            android:icon="@drawable/ic_user"
+            android:title="Account"/>
         <item
             android:id="@+id/nav_messages"
-            android:icon="@drawable/ic_message"
-            android:title="Messages"/>
+            android:icon="@drawable/ic_logout"
+            android:title="Sign Out"/>
         <item
             android:id="@+id/nav_friends"
-            android:icon="@drawable/ic_person"
-            android:title="Friends"/>
+            android:icon="@drawable/ic_settings"
+            android:title="Setting"/>
+
     </group>
 
 
-    <item android:title="Account Settings">
+    <item android:title="Other">
         <menu>
             <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_information"
+                android:title="About"/>
+            <item
                 android:id="@+id/nav_update"
-                android:icon="@drawable/ic_negative"
-                android:title="Update Profile"/>
+                android:icon="@drawable/ic_favourite"
+                android:title="Rate App"/>
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_signout"
-                android:title="Sign Out"/>
+                android:icon="@drawable/ic_information"
+                android:title="Help"/>
+            <item
+                android:id="@+id/nav_logo"
+                android:icon="@drawable/ic_feedback"
+                android:title="Feedback"/>
         </menu>
     </item>
 </menu>

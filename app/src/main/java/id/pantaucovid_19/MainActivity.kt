@@ -16,10 +16,14 @@ import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
 
-    val menuTeks = arrayOf("Home", "Berita", "Feedback")
-    val manuIcon = arrayOf(R.drawable.ic_menu, R.drawable.ic_signout,
-        R.drawable.ic_profiles)
 
+
+    val menuTeks = arrayOf("Home", "News", "Other")
+    val manuIcon = arrayOf(R.drawable.ic_home, R.drawable.ic_news,
+        R.drawable.ic_worldwide)
+
+
+    // Navigation Drawer
 
     lateinit var toolbar: Toolbar
     lateinit var drawerLayout: DrawerLayout
@@ -29,6 +33,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Naviation Drawer
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -43,7 +48,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
         navView.setNavigationItemSelectedListener(this)
 
-
+        //Fragment
 
         val adapter = ViewPagerAdapter(this)
         view_pager.setAdapter(adapter);
@@ -60,19 +65,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_profile -> {
-                Toast.makeText(this, "Profile clicked", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Account clicked", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_messages -> {
-                Toast.makeText(this, "Messages clicked", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Sign Out clicked", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_friends -> {
-                Toast.makeText(this, "Friends clicked", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Setting clicked", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_update -> {
-                Toast.makeText(this, "Update clicked", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Rate App clicked", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_logout -> {
-                Toast.makeText(this, "Sign out clicked", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Help & Feedback Clicked", Toast.LENGTH_SHORT).show()
             }
         }
         drawerLayout.closeDrawer(GravityCompat.START)
