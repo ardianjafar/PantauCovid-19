@@ -16,15 +16,6 @@ import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
 
-
-
-    val menuTeks = arrayOf("Home", "News", "Other")
-    val manuIcon = arrayOf(R.drawable.ic_home, R.drawable.ic_news,
-        R.drawable.ic_worldwide)
-
-
-    // Navigation Drawer
-
     lateinit var toolbar: Toolbar
     lateinit var drawerLayout: DrawerLayout
     lateinit var navView: NavigationView
