@@ -19,7 +19,6 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
             }
         }
     }
-
     override fun getItemCount(): Int {
         return JUMLAH_MENU
     }
