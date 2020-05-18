@@ -5,12 +5,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.login.*
 
-class LoginActivity : Fragment() {
+class LoginActivity : AppCompatActivity() {
+
+    private var progressDialog: ProgressDialog?=null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
@@ -22,6 +26,7 @@ class LoginActivity : Fragment() {
                 Toast.makeText(this, "Please Insert Email and Password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+
             FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener {
 
@@ -37,21 +42,8 @@ class LoginActivity : Fragment() {
                 .addOnFailureListener {
                     Log.d("Main", "Failed Login: ${it.message}")
                     Toast.makeText(this, "Email/Password incorrect", Toast.LENGTH_SHORT).show()
-                    progressDialog.hide()
-
+                    progressDialog?.hide()
                 }
-            if (email == "admin01@gmail.com" || password == "admin01") {
-                val progressDialog = ProgressDialog(
-                    this,
-                    R.style.Theme_MaterialComponents_Light_Dialog
-                )
-                progressDialog.isIndeterminate = true
-                progressDialog.setMessage("Loading...")
-                progressDialog.show()
-                val intent = Intent(this, Dashboard::class.java)
-                startActivity(intent)
-                finish()
             }
         }
     }
-}
