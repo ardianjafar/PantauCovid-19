@@ -67,8 +67,9 @@ class HomeFragment : Fragment() {
         callApiInterUser()
     }
     private fun tampilCovidInter(getDataItr : List<InternasionalPandemiItem>) {
-        listPandemiItr.layoutManager = LinearLayoutManager(context)
-        listPandemiItr.adapter = PantauIntrAdapter(context!!, getDataItr) {
+        listGithub.layoutManager = LinearLayoutManager(context)
+        listGithub.adapter = PantauIntrAdapter(context!!, getDataItr) {
+
             val kawalInter = it
             tampilToast(context!!,kawalInter.countryRegion)
         }

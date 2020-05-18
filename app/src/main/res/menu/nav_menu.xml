@@ -5,23 +5,6 @@
     android:layout_width="match_parent"
     tools:context=".MainActivity">
 
-    <group>
-        <item
-            android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_user"
-            android:title="Account"/>
-        <item
-            android:id="@+id/nav_messages"
-            android:icon="@drawable/ic_logout"
-            android:title="Sign Out"/>
-        <item
-            android:id="@+id/nav_friends"
-            android:icon="@drawable/ic_settings"
-            android:title="Setting"/>
-
-    </group>
-
-
     <item android:title="Other">
         <menu>
             <item
@@ -30,15 +13,15 @@
                 android:title="About"/>
 
             <item
-                android:id="@+id/nav_update"
+                android:id="@+id/nav_rate"
                 android:icon="@drawable/ic_favourite"
                 android:title="Rate App"/>
             <item
-                android:id="@+id/nav_logout"
+                android:id="@+id/nav_help"
                 android:icon="@drawable/ic_information"
                 android:title="Help"/>
             <item
-                android:id="@+id/nav_logo"
+                android:id="@+id/nav_feedback"
                 android:icon="@drawable/ic_feedback"
                 android:title="Feedback"/>
         </menu>

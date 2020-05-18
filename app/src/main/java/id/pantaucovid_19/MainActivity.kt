@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navView.setNavigationItemSelectedListener(this)
 
         //Fragment
-            val manuIcon = arrayOf(R.drawable.ic_home,R.drawable.ic_bacteri,R.drawable.ic_worldwide,R.drawable.ic_news)
+      val manuIcon = arrayOf(R.drawable.ic_home,R.drawable.ic_bacteri,R.drawable.ic_worldwide,R.drawable.ic_news)
 
         val adapter = ViewPagerAdapter(this)
         view_pager.setAdapter(adapter);
@@ -66,20 +66,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_profile -> {
-                Toast.makeText(this, "Account clicked", Toast.LENGTH_SHORT).show()
+            R.id.nav_about -> {
+                Toast.makeText(this, "About clicked", Toast.LENGTH_SHORT).show()
             }
-            R.id.nav_messages -> {
-                Toast.makeText(this, "Sign Out clicked", Toast.LENGTH_SHORT).show()
-            }
-            R.id.nav_friends -> {
-                Toast.makeText(this, "Setting clicked", Toast.LENGTH_SHORT).show()
-            }
-            R.id.nav_update -> {
+            R.id.nav_rate -> {
                 Toast.makeText(this, "Rate App clicked", Toast.LENGTH_SHORT).show()
             }
-            R.id.nav_logout -> {
-                Toast.makeText(this, "Help & Feedback Clicked", Toast.LENGTH_SHORT).show()
+            R.id.nav_help -> {
+                Toast.makeText(this, "Help clicked", Toast.LENGTH_SHORT).show()
+            }
+            R.id.nav_feedback -> {
+                Toast.makeText(this, "Feedback clicked", Toast.LENGTH_SHORT).show()
             }
         }
         drawerLayout.closeDrawer(GravityCompat.START)

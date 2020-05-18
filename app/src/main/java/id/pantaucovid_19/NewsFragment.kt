@@ -13,8 +13,8 @@ import id.pantaucovid_19.data.httpClient
 import id.pantaucovid_19.util.dismissLoading
 import id.pantaucovid_19.util.showLoading
 import id.pantaucovid_19.util.tampilToast
-import kotlinx.android.synthetic.main.content_main.*
-import kotlinx.android.synthetic.main.fragment_news.*
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_news.swipeRefreshLayout
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

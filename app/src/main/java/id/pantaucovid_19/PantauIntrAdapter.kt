@@ -10,10 +10,10 @@ import kotlinx.android.synthetic.main.pandemi_internasional.view.*
 
 class PantauIntrAdapter (
         private val context: Context,
-                private val items:
-                        List<InternasionalPandemiItem>,
-                        private val listener: (AttributesX) -> Unit) :
-                                RecyclerView.Adapter<PantauIntrAdapter.ViewHolder>(){
+        private val items:
+        List<InternasionalPandemiItem>,
+        private val listener: (AttributesX) -> Unit) :
+        RecyclerView.Adapter<PantauIntrAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ViewHolder(
@@ -40,7 +40,6 @@ class PantauIntrAdapter (
                 itemView.ItrMeninggal.text = item.deaths.toString()
 
                 containerView.setOnClickListener { listener(item) }
-
             }
         }
     }
