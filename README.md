@@ -10,3 +10,5 @@ Project, secara keseluruhan terdapat di final.
 ![WhatsApp Image 2020-05-17 at 23 39 14](https://user-images.githubusercontent.com/54489655/82279623-3413d000-99b7-11ea-95da-169eecfe44fc.jpeg)
 ![WhatsApp Image 2020-05-17 at 23 28 31](https://user-images.githubusercontent.com/54489655/82279626-34ac6680-99b7-11ea-8014-7951afc7fe89.jpeg)
 ![WhatsApp Image 2020-05-17 at 23 28 41](https://user-images.githubusercontent.com/54489655/82279629-3544fd00-99b7-11ea-9dc6-f1546554224a.jpeg)
+
+![WhatsApp Image 2020-05-17 at 20 31 09](https://user-images.githubusercontent.com/54489655/82281329-409a2780-99bb-11ea-87e6-229f63cabc7d.jpeg)
