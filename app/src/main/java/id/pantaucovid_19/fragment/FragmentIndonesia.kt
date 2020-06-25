@@ -16,13 +16,13 @@ import id.pantaucovid_19.data.httpClient
 import id.pantaucovid_19.util.dismissLoading
 import id.pantaucovid_19.util.showLoading
 import id.pantaucovid_19.util.tampilToast
-import kotlinx.android.synthetic.main.fragment_home.swipeRefreshLayout
-import kotlinx.android.synthetic.main.fragment_protokol.*
+import kotlinx.android.synthetic.main.fragment_global.swipeRefreshLayout
+import kotlinx.android.synthetic.main.fragment_indonesia.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ProtokolFragment : Fragment() {
+class FragmentIndonesia : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -59,7 +59,7 @@ class ProtokolFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(
-            R.layout.fragment_protokol,
+            R.layout.fragment_indonesia,
             container,false)
     }
 

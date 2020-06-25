@@ -8,7 +8,7 @@ import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.pantaucovid_19.R
-import id.pantaucovid_19.adapter.PantauCovidAdapter
+import id.pantaucovid_19.adapter.PantauCovidProvinsi
 import id.pantaucovid_19.api.KawalCoronaItem
 import id.pantaucovid_19.data.CovidService
 import id.pantaucovid_19.data.apiRequest
@@ -16,13 +16,13 @@ import id.pantaucovid_19.data.httpClient
 import id.pantaucovid_19.util.dismissLoading
 import id.pantaucovid_19.util.showLoading
 import id.pantaucovid_19.util.tampilToast
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_news.swipeRefreshLayout
+import kotlinx.android.synthetic.main.fragment_provinsi.*
+import kotlinx.android.synthetic.main.fragment_provinsi.swipeRefreshLayout
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class NewsFragment : Fragment() {
+class FragmentProvinsi : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -70,7 +70,7 @@ class NewsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(
-            R.layout.fragment_news,
+            R.layout.fragment_provinsi,
             container,false)
     }
     override fun onViewCreated(
@@ -83,7 +83,7 @@ class NewsFragment : Fragment() {
     private fun tampilCovid(getUsers: List<KawalCoronaItem>) {
         listGithub.layoutManager = LinearLayoutManager(context)
         listGithub.adapter =
-            PantauCovidAdapter(context!!, getUsers) {
+            PantauCovidProvinsi(context!!, getUsers) {
 
                 val kawal = it
                 tampilToast(context!!, kawal.provinsi)

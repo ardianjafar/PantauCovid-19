@@ -9,7 +9,7 @@ import id.pantaucovid_19.api.AttributesX
 import id.pantaucovid_19.api.InternasionalPandemiItem
 import id.pantaucovid_19.R
 import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.pandemi_internasional.view.*
+import kotlinx.android.synthetic.main.item_covid_internasional.view.*
 
 class PantauIntrAdapter (
     private val context: Context,
@@ -21,7 +21,7 @@ class PantauIntrAdapter (
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ViewHolder(
             context, LayoutInflater.from(context).inflate(
-                R.layout.pandemi_internasional,
+                R.layout.item_covid_internasional,
                 parent, false
             )
         )

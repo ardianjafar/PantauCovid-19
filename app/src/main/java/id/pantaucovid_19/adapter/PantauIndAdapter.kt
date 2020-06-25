@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import id.pantaucovid_19.api.IndonesiPandemiItem
 import id.pantaucovid_19.R
 import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.pandemi_indonesia.view.*
+import kotlinx.android.synthetic.main.item_covid_indonesia.view.*
 
 class PantauIndAdapter (
     private val context: Context,
@@ -20,7 +20,7 @@ class PantauIndAdapter (
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ViewHolder(
             context, LayoutInflater.from(context).inflate(
-                R.layout.pandemi_indonesia,
+                R.layout.item_covid_indonesia,
                 parent, false
             )
         )

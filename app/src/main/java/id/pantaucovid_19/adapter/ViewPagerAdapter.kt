@@ -3,9 +3,10 @@ package id.pantaucovid_19.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import id.pantaucovid_19.fragment.NewsFragment
-import id.pantaucovid_19.fragment.PendidikanFragment
-import id.pantaucovid_19.fragment.ProtokolFragment
+import id.pantaucovid_19.fragment.FragmentProvinsi
+import id.pantaucovid_19.fragment.FragmentOther
+import id.pantaucovid_19.fragment.FragmentIndonesia
+import id.pantaucovid_19.fragment.FragmentGlobal
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity){
@@ -13,16 +14,16 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     override fun createFragment(position: Int): Fragment {
 
         when(position) {
-            0 -> { return HomeFragment()
+            0 -> { return FragmentGlobal()
             }
-            1 -> { return NewsFragment()
+            1 -> { return FragmentProvinsi()
             }
-            2 -> { return ProtokolFragment()
+            2 -> { return FragmentIndonesia()
             }
-            3 -> { return PendidikanFragment()
+            3 -> { return FragmentOther()
             }
             else -> {
-                return NewsFragment()
+                return FragmentProvinsi()
             }
         }
     }

@@ -9,19 +9,19 @@ import id.pantaucovid_19.api.Attributes
 import id.pantaucovid_19.api.KawalCoronaItem
 import id.pantaucovid_19.R
 import kotlinx.android.extensions.LayoutContainer
-import kotlinx.android.synthetic.main.pantau_covid_item.view.*
+import kotlinx.android.synthetic.main.item_covid_provinsi.view.*
 
-class PantauCovidAdapter(
+class PantauCovidProvinsi(
     private val context: Context,
     private val items:
     List<KawalCoronaItem>,
     private val listener: (Attributes)-> Unit) :
-    RecyclerView.Adapter<PantauCovidAdapter.ViewHolder>() {
+    RecyclerView.Adapter<PantauCovidProvinsi.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         ViewHolder(
             context, LayoutInflater.from(context).inflate(
-                R.layout.pantau_covid_item,
+                R.layout.item_covid_provinsi,
                 parent, false
             )
         )

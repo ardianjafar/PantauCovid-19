@@ -1,4 +1,4 @@
-package id.pantaucovid_19.adapter
+package id.pantaucovid_19.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.pantaucovid_19.R
+import id.pantaucovid_19.adapter.PantauIntrAdapter
 import id.pantaucovid_19.api.InternasionalPandemiItem
 import id.pantaucovid_19.data.InternasionalService
 import id.pantaucovid_19.data.apiRequest
@@ -15,13 +16,13 @@ import id.pantaucovid_19.data.httpClient
 import id.pantaucovid_19.util.dismissLoading
 import id.pantaucovid_19.util.showLoading
 import id.pantaucovid_19.util.tampilToast
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.android.synthetic.main.fragment_home.swipeRefreshLayout
+import kotlinx.android.synthetic.main.fragment_global.*
+import kotlinx.android.synthetic.main.fragment_global.swipeRefreshLayout
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class HomeFragment : Fragment() {
+class FragmentGlobal : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -58,7 +59,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(
-            R.layout.fragment_home,
+            R.layout.fragment_global,
         container,false)
     }
 
@@ -70,8 +71,8 @@ class HomeFragment : Fragment() {
         callApiInterUser()
     }
     private fun tampilCovidInter(getDataItr : List<InternasionalPandemiItem>) {
-        listGithub.layoutManager = LinearLayoutManager(context)
-        listGithub.adapter =
+        listGlobalPandemi.layoutManager = LinearLayoutManager(context)
+        listGlobalPandemi.adapter =
             PantauIntrAdapter(context!!, getDataItr) {
 
                 val kawalInter = it
