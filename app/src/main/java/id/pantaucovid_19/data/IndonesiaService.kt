@@ -1,6 +1,6 @@
 package id.pantaucovid_19.data
 
-import id.pantaucovid_19.IndonesiPandemiItem
+import id.pantaucovid_19.api.IndonesiPandemiItem
 import retrofit2.Call
 import retrofit2.http.GET
 

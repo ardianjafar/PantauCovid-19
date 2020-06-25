@@ -1,4 +1,4 @@
-package id.pantaucovid_19
+package id.pantaucovid_19.api
 
 
 import com.google.gson.annotations.SerializedName

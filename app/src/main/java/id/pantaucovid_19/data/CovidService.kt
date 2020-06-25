@@ -1,7 +1,6 @@
 package id.pantaucovid_19.data
 
-import id.pantaucovid_19.KawalCoronaItem
-import retrofit2.Call
+import id.pantaucovid_19.api.KawalCoronaItem
 import retrofit2.http.GET
 
 interface CovidService {

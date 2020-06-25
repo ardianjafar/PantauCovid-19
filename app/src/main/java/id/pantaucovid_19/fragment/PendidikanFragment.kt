@@ -1,4 +1,4 @@
-package id.pantaucovid_19
+package id.pantaucovid_19.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.content_main.*
+import id.pantaucovid_19.R
 
 class PendidikanFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +19,8 @@ class PendidikanFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_pendidikan,
+        return inflater.inflate(
+            R.layout.fragment_pendidikan,
             container,false)
     }
 

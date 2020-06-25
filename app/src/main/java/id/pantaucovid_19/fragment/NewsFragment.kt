@@ -1,4 +1,4 @@
-package id.pantaucovid_19
+package id.pantaucovid_19.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import id.pantaucovid_19.R
+import id.pantaucovid_19.adapter.PantauCovidAdapter
+import id.pantaucovid_19.api.KawalCoronaItem
 import id.pantaucovid_19.data.CovidService
 import id.pantaucovid_19.data.apiRequest
 import id.pantaucovid_19.data.httpClient
@@ -66,7 +69,8 @@ class NewsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_news,
+        return inflater.inflate(
+            R.layout.fragment_news,
             container,false)
     }
     override fun onViewCreated(
@@ -78,10 +82,11 @@ class NewsFragment : Fragment() {
     }
     private fun tampilCovid(getUsers: List<KawalCoronaItem>) {
         listGithub.layoutManager = LinearLayoutManager(context)
-        listGithub.adapter = PantauCovidAdapter(context!!, getUsers) {
+        listGithub.adapter =
+            PantauCovidAdapter(context!!, getUsers) {
 
-            val kawal = it
-            tampilToast(context!!, kawal.provinsi)
-        }
+                val kawal = it
+                tampilToast(context!!, kawal.provinsi)
+            }
     }
 }
